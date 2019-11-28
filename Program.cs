@@ -39,6 +39,8 @@ namespace ExercicioBanco {
             c.Saque = double.Parse(Console.ReadLine());
             Console.WriteLine("Dados Atualizados:\n " + c);
 
+            Console.WriteLine("uma alteração qualquer");
+
         }
     }
 }
