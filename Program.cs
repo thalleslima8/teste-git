@@ -51,7 +51,7 @@ namespace ExercicioBanco
                 c.Saque = double.Parse(Console.ReadLine());
                 Console.WriteLine($"Dados Atualizados at {DateTime.Now}:\n " + c);
 
-                Console.WriteLine("uma alteração qualquer blz");
+                Console.WriteLine("uma alteração qualquer beleza!");
                 Console.WriteLine("Pronto");
             }
         }
