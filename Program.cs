@@ -50,7 +50,7 @@ namespace ExercicioBanco
             {
                 Console.WriteLine("Dados Atualizados:\n " + c);
 
-                Console.WriteLine("uma alteração qualquer blz");
+                Console.WriteLine("uma alteração qualquer beleza!");
                 Console.WriteLine("Pronto");
             }
         }
