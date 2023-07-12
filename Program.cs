@@ -1,9 +1,12 @@
 ﻿using System;
 
-namespace ExercicioBanco {
-    class Program {
-        static void Main(string[] args) {
-            
+namespace ExercicioBanco
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
             Console.WriteLine("Entre com o nome do Titular: ");
             string nome = Console.ReadLine();
             Console.WriteLine("Entre com o numero da Conta: ");
@@ -14,15 +17,18 @@ namespace ExercicioBanco {
             Console.WriteLine("Haverá deposito inicial (s - sim ou n - não)");
             string d = Console.ReadLine();
 
-            while (d.Contains('s') != true) {
-                if (d.Contains('n') == true) {
+            while (d.Contains('s') != true)
+            {
+                if (d.Contains('n') == true)
+                {
                     break;
                 }
                 Console.WriteLine("Digite s - sim ou n - não");
                 d = Console.ReadLine();
             }
-                       
-            if (d.Contains('s') == true || d.Contains('S') == true) {
+
+            if (d.Contains('s') == true || d.Contains('S') == true)
+            {
                 Console.WriteLine("Entre com o deposito inicial: ");
                 saldo = double.Parse(Console.ReadLine());
 
@@ -36,12 +42,18 @@ namespace ExercicioBanco {
             Console.WriteLine("Dados Atualizados:\n " + c);
 
             Console.WriteLine("Entre com o valor do saque: ");
-            c.Saque = double.Parse(Console.ReadLine());
-            Console.WriteLine($"Dados Atualizados at {DateTime.Now}:\n " + c);
+            var saque = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("uma alteração qualquer blz");
-            Console.WriteLine("Pronto");
+            if (c.Saldo < saque)
+                Console.WriteLine($"Impossível de sacar, saldo insuficiente!\n {c}");
+            else
+            {                
+                c.Saque = double.Parse(Console.ReadLine());
+                Console.WriteLine($"Dados Atualizados at {DateTime.Now}:\n " + c);
 
+                Console.WriteLine("uma alteração qualquer blz");
+                Console.WriteLine("Pronto");
+            }
         }
     }
 }
