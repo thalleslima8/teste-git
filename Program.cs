@@ -37,7 +37,7 @@ namespace ExercicioBanco {
 
             Console.WriteLine("Entre com o valor do saque: ");
             c.Saque = double.Parse(Console.ReadLine());
-            Console.WriteLine("Dados Atualizados:\n " + c);
+            Console.WriteLine($"Dados Atualizados at {DateTime.Now}:\n " + c);
 
             Console.WriteLine("uma alteração qualquer blz");
             Console.WriteLine("Pronto");
